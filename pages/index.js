@@ -14,7 +14,7 @@ export default function Home() {
       cornerRadius={20}
       onAuthCallback={(user) => {
         console.log(user);
-        return <Profile user={user} />;
+        window.location.href = "/profile";
       }}
       requestAccess={"write"}
       additionalClasses={"css-class-for-wrapper"}
