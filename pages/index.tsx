@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { TLoginButton, TLoginButtonSize } from "react-telegram-auth";
 import { useState } from "react";
-import Profile from "./Profile";
 
 export default function Home() {
   const [user, setUser] = useState(null);
