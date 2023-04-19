@@ -14,7 +14,7 @@ export default function Home() {
       cornerRadius={20}
       onAuthCallback={(user) => {
         console.log(user);
-        return <Profile first_name={user.first_name} />;
+        localStorage.setItem("user", JSON.stringify(user));
       }}
       requestAccess={"write"}
     />
