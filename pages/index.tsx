@@ -1,9 +1,11 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Script from "next/script";
 import { TLoginButton, TLoginButtonSize } from "react-telegram-auth";
+import { useState } from "react";
+import Profile from "./Profile";
 
 export default function Home() {
+  const [user, setUser] = useState(null);
+  const firstName2 = "first_name";
   return (
     <TLoginButton
       botName="TGoauthbot"
@@ -13,7 +15,7 @@ export default function Home() {
       cornerRadius={20}
       onAuthCallback={(user) => {
         console.log(user);
-        localStorage.setItem("firstName", user.first_name);
+        return <Profile firstName={firstName2} />;
       }}
       requestAccess={"write"}
     />
