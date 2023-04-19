@@ -2,7 +2,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Script from "next/script";
 import { TLoginButton, TLoginButtonSize } from "react-telegram-auth";
-import Profile from "./Profile";
 
 export default function Home() {
   return (
@@ -14,7 +13,7 @@ export default function Home() {
       cornerRadius={20}
       onAuthCallback={(user) => {
         console.log(user);
-        localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("firstName", user.first_name);
       }}
       requestAccess={"write"}
     />

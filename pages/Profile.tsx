@@ -1,13 +1,13 @@
 function Profile() {
-  const user = localStorage.getItem("user");
+  const firstName = localStorage.getItem("firstName");
 
   return (
     <div>
       <h1>Profile</h1>
-      <p>First Name: {user ? JSON.parse(user).first_name : "No user"}</p>
+      <p>First Name: {firstName}</p>
       <button
         onClick={() => {
-          localStorage.removeItem("token");
+          localStorage.removeItem("firstName");
           window.location.href = "/";
         }}
       >
