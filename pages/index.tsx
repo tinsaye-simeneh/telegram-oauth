@@ -17,7 +17,6 @@ export default function Home() {
         window.location.href = "/Profile";
       }}
       requestAccess={"write"}
-      additionalClasses={"css-class-for-wrapper"}
     />
   );
 }
