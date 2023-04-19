@@ -13,7 +13,8 @@ export default function Home() {
       usePic={false}
       cornerRadius={20}
       onAuthCallback={(user) => {
-        Profile(user);
+        console.log(user);
+        return <Profile user={user} />;
       }}
       requestAccess={"write"}
       additionalClasses={"css-class-for-wrapper"}
