@@ -8,13 +8,9 @@ export default function Home() {
   return (
     <div>
       {user ? (
-        <Profile firstName={user.first_name} />
+        <div>user: {JSON.stringify(user)}</div>
       ) : (
         <div>
-          <Head>
-            <title>Telegram Login</title>
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
           <main>
             <h1 className="title">Telegram Login</h1>
             <TLoginButton
