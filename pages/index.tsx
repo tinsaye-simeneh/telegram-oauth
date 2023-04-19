@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       {user ? (
-        <div>user: {JSON.stringify(user)}</div>
+        <div>Hello {user.first_name}</div>
       ) : (
         <div>
           <main>
