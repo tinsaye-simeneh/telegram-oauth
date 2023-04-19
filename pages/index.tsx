@@ -16,6 +16,7 @@ export default function Home() {
       onAuthCallback={(user) => {
         console.log(user);
         return <Profile firstName={firstName2} />;
+        window.location.href = "/Profile";
       }}
       requestAccess={"write"}
     />
