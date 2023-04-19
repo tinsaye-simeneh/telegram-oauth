@@ -8,7 +8,10 @@ export default function Home() {
   return (
     <div>
       {user ? (
-        <div>Hello {user.first_name}</div>
+        <div>
+          <h1>Hello {user.first_name}</h1>
+          <p>Welcome to the Telegram Login Demo.</p>
+        </div>
       ) : (
         <div>
           <main>
