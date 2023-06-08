@@ -1,10 +1,13 @@
 import Head from "next/head";
 import { TLoginButton, TLoginButtonSize } from "react-telegram-auth";
 import { useState } from "react";
+import TelegramLoginButton from "react-telegram-login";
 
 export default function Home() {
   const [user, setUser] = useState(null);
-
+  const handleTelegramResponse = (response) => {
+    console.log(response);
+  };
   return (
     <div>
       {user ? (
@@ -16,8 +19,9 @@ export default function Home() {
         <div>
           <main>
             <h1 className="title">Telegram Login</h1>{" "}
-            <TLoginButton
+            <TelegramLoginButton
               botName="TGoauthbot"
+              dataOnauth={handleTelegramResponse}
               buttonSize={TLoginButtonSize.Medium}
               lang="en"
               usePic={false}
