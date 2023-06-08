@@ -16,18 +16,7 @@ export default function Home() {
         <div>
           <main>
             <h1 className="title">Telegram Login</h1>
-            <TLoginButton
-              botName="TGoauthbot"
-              buttonSize={TLoginButtonSize.Medium}
-              lang="en"
-              usePic={false}
-              cornerRadius={20}
-              onAuthCallback={(user) => {
-                console.log(user);
-                setUser(user);
-              }}
-              requestAccess={"write"}
-            />
+            <h2> who the hell are you?</h2>
           </main>
         </div>
       )}
