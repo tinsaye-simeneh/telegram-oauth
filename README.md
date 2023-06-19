@@ -1,1 +1,1 @@
-Telegram login auth using react-telegram-login library
+Telegram login auth using react-telegram-login library.
